@@ -2,12 +2,11 @@ package dsa;
 
 public class Kata {
 
-    // 1. Check if number is even
+
     public static boolean isEven(int number) {
         return number % 2 == 0;
     }
 
-    // 2. Check if number is prime
     public static boolean isPrimeNumber(int number) {
         if (number <= 1) return false;
 
@@ -19,12 +18,11 @@ public class Kata {
         return true;
     }
 
-    // 3. Subtract (always return positive difference)
+
     public static int subtract(int a, int b) {
         return Math.abs(a - b);
     }
 
-    // 4. Divide (handle division by zero)
     public static float divide(int a, int b) {
         if (b == 0) {
             return 0;
