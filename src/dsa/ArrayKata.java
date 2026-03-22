@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class ArrayKata {
 
-    // 1. Maximum
+
     public static int maximumIn(int[] array) {
         int max = array[0];
         for (int num : array) {
@@ -16,7 +16,6 @@ public class ArrayKata {
         return max;
     }
 
-    // 2. Minimum
     public static int minimumIn(int[] array) {
         int min = array[0];
         for (int num : array) {
@@ -27,7 +26,6 @@ public class ArrayKata {
         return min;
     }
 
-    // 3. Sum
     public static int sumOf(int[] array) {
         int sum = 0;
         for (int num : array) {
@@ -36,7 +34,7 @@ public class ArrayKata {
         return sum;
     }
 
-    // 4. Sum of even numbers
+
     public static int sumOfEvenNumbersIn(int[] array) {
         int sum = 0;
         for (int num : array) {
@@ -47,7 +45,6 @@ public class ArrayKata {
         return sum;
     }
 
-    // 5. Sum of odd numbers
     public static int sumOfOddNumbersIn(int[] array) {
         int sum = 0;
         for (int num : array) {
@@ -58,14 +55,12 @@ public class ArrayKata {
         return sum;
     }
 
-    // 6. Min and Max
     public static int[] maximumAndMinimumOf(int[] array) {
         int min = minimumIn(array);
         int max = maximumIn(array);
         return new int[]{min, max};
     }
 
-    // 7. Count odd numbers
     public static int noOfOddNumbersIn(int[] array) {
         int count = 0;
         for (int num : array) {
@@ -76,7 +71,6 @@ public class ArrayKata {
         return count;
     }
 
-    // 8. Count even numbers
     public static int noOfEvenNumbersIn(int[] array) {
         int count = 0;
         for (int num : array) {
@@ -87,7 +81,6 @@ public class ArrayKata {
         return count;
     }
 
-    // 9. Even numbers array
     public static int[] evenNumbersIn(int[] array) {
         ArrayList<Integer> result = new ArrayList<>();
         for (int num : array) {
@@ -98,7 +91,6 @@ public class ArrayKata {
         return result.stream().mapToInt(i -> i).toArray();
     }
 
-    // 10. Odd numbers array
     public static int[] oddNumbersIn(int[] array) {
         ArrayList<Integer> result = new ArrayList<>();
         for (int num : array) {
@@ -109,7 +101,6 @@ public class ArrayKata {
         return result.stream().mapToInt(i -> i).toArray();
     }
 
-    // 11. Square numbers (perfect squares)
     public static int[] squareNumbersIn(int[] array) {
         ArrayList<Integer> result = new ArrayList<>();
         for (int num : array) {
@@ -121,7 +112,6 @@ public class ArrayKata {
         return result.stream().mapToInt(i -> i).toArray();
     }
 
-    // Main method for testing
     public static void main(String[] args) {
         int[] numbers = {1, 4, 7, 9, 16, 25, 8, 3};
 
