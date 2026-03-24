@@ -6,32 +6,50 @@ import static org.junit.jupiter.api.Assertions.*;
 class CreditCardValidatorTest {
 
     @Test
-    void shouldReturnValidCard() {
-        assertTrue(CreditCardValidator.isValidCard("4388576018410707"));
+    void shouldValidateVisaCardCorrectly() {
+        String card = "4111111111111111";
+
+        assertTrue(CreditCardValidator.isValidCard(card));
+        assertEquals("Visa", CreditCardValidator.getCardType(card));
     }
 
     @Test
-    void shouldReturnInvalidCard() {
-        assertFalse(CreditCardValidator.isValidCard("4388576018402626"));
+    void shouldValidateMasterCardCorrectly() {
+        String card = "5555555555554444";
+
+        assertTrue(CreditCardValidator.isValidCard(card));
+        assertEquals("MasterCard", CreditCardValidator.getCardType(card));
     }
 
     @Test
-    void shouldDetectVisa() {
-        assertEquals("Visa", CreditCardValidator.getCardType("4388576018410707"));
+    void shouldValidateAmericanExpressCorrectly() {
+        String card = "378282246310005";
+
+        assertTrue(CreditCardValidator.isValidCard(card));
+        assertEquals("American Express", CreditCardValidator.getCardType(card));
     }
 
     @Test
-    void shouldDetectMasterCard() {
-        assertEquals("MasterCard", CreditCardValidator.getCardType("5123456789012345"));
+    void shouldValidateDiscoverCardCorrectly() {
+        String card = "6011111111111117";
+
+        assertTrue(CreditCardValidator.isValidCard(card));
+        assertEquals("Discover", CreditCardValidator.getCardType(card));
     }
 
     @Test
-    void shouldDetectAmericanExpress() {
-        assertEquals("American Express", CreditCardValidator.getCardType("371234567890123"));
+    void shouldReturnInvalidForWrongCardNumber() {
+        String card = "4388576018402626";
+
+        assertFalse(CreditCardValidator.isValidCard(card));
+        assertEquals("Visa", CreditCardValidator.getCardType(card));
     }
 
     @Test
-    void shouldDetectDiscover() {
-        assertEquals("Discover", CreditCardValidator.getCardType("6011123456789012"));
+    void shouldReturnInvalidEvenIfTypeIsCorrect() {
+        String card = "4111111111111121"; // Visa format but invalid
+
+        assertFalse(CreditCardValidator.isValidCard(card));
+        assertEquals("Visa", CreditCardValidator.getCardType(card));
     }
 }
