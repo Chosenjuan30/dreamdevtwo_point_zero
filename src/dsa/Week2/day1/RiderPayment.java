@@ -1,4 +1,4 @@
-package dsa;
+package dsa.Week2.day1;
 
 public class RiderPayment {
 

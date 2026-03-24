@@ -51,7 +51,7 @@ public class Kata {
 
     public static boolean isPalindrome(int number) {
         if (number < 10000 || number > 99999) {
-            return false; // ensure it's a 5-digit number
+            return false;
         }
 
         int original = number;
@@ -96,3 +96,5 @@ public class Kata {
         System.out.println("squareOf(5): " + squareOf(5));
     }
 }
+
+
