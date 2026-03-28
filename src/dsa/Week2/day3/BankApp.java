@@ -36,7 +36,8 @@ public class BankApp {
         }
         return account;
     }
-    private String generateAccountNumber(){
-        return UUID.randomUUID().toString().substring(0,8);
+    private String generateAccountNumber() {
+        long number = (long)(Math.random() * 1_000_000_0000L); // 10 digits max
+        return String.format("%010d", number);
     }
 }
