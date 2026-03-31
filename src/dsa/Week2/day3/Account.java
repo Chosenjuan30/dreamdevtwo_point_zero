@@ -34,14 +34,14 @@ public class Account {
         return balance;
     }
 
-    // 🔐 PIN validation
+
     private void validatePin(String pin) {
         if (!this.pin.equals(pin)) {
             throw new IllegalArgumentException("Invalid PIN");
         }
     }
 
-    // 💰 Amount validation (THIS FIXES YOUR FAILING TESTS)
+
     private void validateAmount(BigDecimal amount) {
         if (amount == null || amount.compareTo(BigDecimal.ZERO) <= 0) {
             throw new IllegalArgumentException("Amount must be greater than zero");
