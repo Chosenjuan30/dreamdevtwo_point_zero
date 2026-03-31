@@ -8,7 +8,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BikeTest {
+public class BikeTest {
 
     private Bike bike;
 
@@ -33,7 +33,7 @@ class BikeTest {
 
     @Test
     @DisplayName("Bike turns OFF and resets speed")
-    void bikeTurnsOff() {
+  public  void bikeTurnsOff() {
         bike.setSpeed(25);
         bike.turnOff();
 
@@ -50,7 +50,7 @@ class BikeTest {
             "45, 49, 4"
     })
     @DisplayName("Bike accelerates correctly based on gear ranges")
-    void bikeAccelerates(int initialSpeed, int expectedSpeed, int expectedGear) {
+   public void bikeAccelerates(int initialSpeed, int expectedSpeed, int expectedGear) {
         bike.setSpeed(initialSpeed);
 
         bike.accelerate();
@@ -68,7 +68,7 @@ class BikeTest {
             "45, 41, 4"
     })
     @DisplayName("Bike decelerates correctly based on gear ranges")
-    void bikeDecelerates(int initialSpeed, int expectedSpeed, int expectedGear) {
+   public void bikeDecelerates(int initialSpeed, int expectedSpeed, int expectedGear) {
         bike.setSpeed(initialSpeed);
 
         bike.decelerate();
@@ -81,7 +81,7 @@ class BikeTest {
 
     @Test
     @DisplayName("Speed should never go below 0")
-    void speedNeverNegative() {
+    public void speedNeverNegative() {
         bike.setSpeed(1);
 
         bike.decelerate();
@@ -92,7 +92,7 @@ class BikeTest {
 
     @Test
     @DisplayName("Bike does not accelerate when OFF")
-    void noAccelerationWhenOff() {
+    public void noAccelerationWhenOff() {
         bike.turnOff();
 
         bike.accelerate();
@@ -115,19 +115,19 @@ class BikeTest {
     @DisplayName("Gear transitions correctly at boundary values")
     void gearTransitionsCorrectly() {
 
-        // Gear 1 → Gear 2
+
         bike.setSpeed(20);
-        bike.accelerate(); // 21
+        bike.accelerate();
         assertEquals(2, bike.getGear().ordinal() + 1);
 
-        // Gear 2 → Gear 3
+
         bike.setSpeed(30);
-        bike.accelerate(); // 31
+        bike.accelerate();
         assertEquals(3, bike.getGear().ordinal() + 1);
 
-        // Gear 3 → Gear 4
+
         bike.setSpeed(40);
-        bike.accelerate(); // 41
+        bike.accelerate();
         assertEquals(4, bike.getGear().ordinal() + 1);
     }
 }
