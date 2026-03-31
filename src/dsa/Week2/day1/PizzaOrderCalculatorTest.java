@@ -15,7 +15,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PizzaOrderCalculatorTest {
 
 
-
     @Nested
     @DisplayName("PizzaType enum")
     public class PizzaTypeTests {
