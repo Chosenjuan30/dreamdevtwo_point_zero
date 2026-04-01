@@ -92,7 +92,7 @@ public class RiderWageCalculatorTest {
 
         @Test
         @DisplayName("60 deliveries → ₦20000 (60 × 250 + 5000) — boundary at exactly 60%")
-        void sixtyDeliveries() {
+        public void sixtyDeliveries() {
             assertEquals(20_000, RiderWageCalculator.calculateWage(60));
         }
 
@@ -117,7 +117,7 @@ public class RiderWageCalculatorTest {
 
     @Nested
     @DisplayName("Collection rate >= 70% — rate is ₦500 per parcel")
-    class SeventyPlusPercentTests {
+    public class SeventyPlusPercentTests {
 
         @Test
         @DisplayName("70 deliveries → ₦40000 (70 × 500 + 5000) — boundary at exactly 70%")
