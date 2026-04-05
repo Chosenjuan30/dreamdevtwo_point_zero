@@ -1,8 +1,6 @@
-package dsa.Week2.day1;
+package dsa.Week2.assignments.ac;
 
 
-import dsa.Week2.day1.ac.ACMode;
-import dsa.Week2.day1.ac.AirConditioner;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;

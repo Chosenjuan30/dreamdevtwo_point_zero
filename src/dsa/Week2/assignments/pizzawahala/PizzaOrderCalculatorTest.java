@@ -1,4 +1,4 @@
-package dsa.Week2.day1;
+package dsa.Week2.assignments.pizzawahala;
 
 
 import org.junit.jupiter.api.DisplayName;
@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static dsa.Week2.day1.PizzaOrderCalculator.PizzaType.*;
+import static dsa.Week2.assignments.pizzawahala.PizzaOrderCalculator.PizzaType.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 

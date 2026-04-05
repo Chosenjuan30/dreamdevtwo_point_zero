@@ -1,7 +1,6 @@
-package dsa.Week2.day1;
+package dsa.Week2.assignments.riderpayment;
 
 
-import dsa.Week2.day1.riderpayment.RiderWageCalculator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

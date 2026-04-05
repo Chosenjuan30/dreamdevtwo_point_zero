@@ -1,4 +1,4 @@
-package dsa.Week2.day1.checkout;
+package dsa.Week2.assignments.checkout;
 
 
 import java.math.BigDecimal;

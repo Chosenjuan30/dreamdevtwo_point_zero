@@ -1,7 +1,7 @@
 package dsa;
 
 
-import dsa.Week2.day1.RiderPayment;
+import dsa.Week2.assignments.riderpayment.RiderPayment;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

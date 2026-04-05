@@ -1,4 +1,4 @@
-package dsa.Week2.day1;
+package dsa.Week2.assignments.ac;
 
 public enum ACMode {
     COOL,
